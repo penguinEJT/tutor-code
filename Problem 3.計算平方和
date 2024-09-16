@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+  int a[6];
+  int number=0;
+  for(int i=0;i<6;i++){
+    scanf("%d",&a[i]);
+    number=number+a[i]*a[i];
+  }
+printf("%d\n", number);
+return 0;
+}
