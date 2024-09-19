@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+  int number;
+  int a[100][3];
+  float chinese;
+  float english;
+  float math;
+  float all_average;
+  float sum=0;
+  scanf("%d",&number);
+  for(int i=0;i<number;i++){
+    for(int j=0;j<3;j++){
+      scanf("%d",&a[i][j]);
+    }
+  }
+  for(int i=0;i<number;i++){
+    sum=sum+a[i][0];
+  }
+  sum=(float)sum/number;
+  chinese=sum;
+  sum=0;
+  for(int i=0;i<number;i++){
+    sum=sum+a[i][1];
+  }
+  sum=(float)sum/number;
+  english=sum;
+  sum=0;
+  for(int i=0;i<number;i++){
+    sum=sum+a[i][2];
+  }
+  sum=(float)sum/number;
+  math=sum;
+  all_average=(chinese+english+math)/3;
+  printf("%.1f %.1f %.1f %.1f\n",all_average,chinese,english,math);
+}
