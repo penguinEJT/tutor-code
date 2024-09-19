@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+  int number;
+  scanf("%d",&number);
+  int a[5];
+  for(int i=0;i<5;i++){
+    scanf("%d",&a[i]);
+  }
+  int count[14]={0};
+  for(int i=0;i<number;i++){
+    for(int j=0;j<5;j++){
+      int card=0;
+      scanf("%d",&card);
+      count[card]++;
+    }
+  }
+  int result=0;
+  for(int i=0;i<5;i++){
+    if(count[a[i]]>0){
+      result++;
+    }
+  }
+  printf("%d\n",result);
+  return 0;
+}
