@@ -1,0 +1,26 @@
+#include <stdio.h>
+    int main(){
+  int start_hour,start_minute;
+  int end_hour,end_minute;
+  int hour,minute;
+  int price;
+  scanf("%d %d", &start_hour,&start_minute);
+  scanf("%d %d", &end_hour, &end_minute);
+  hour=end_hour-start_hour;
+  minute=end_minute-start_minute;
+  minute=hour*60+minute;
+  if(minute<120){
+    price=(minute/30)*30;
+  }
+  else if(minute<240 && minute>=120){
+    minute=minute-120;
+    price=120+(minute/30)*40;
+  }
+  else{
+    minute=minute-240;
+    price=280+(minute/30)*60;
+  }
+  printf("%d",price);
+  printf("\n");
+  return 0;
+}
