@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            printf("Person\n");
+            break;
+        case 2:
+            printf("Fairy\n");
+            break;
+        case 3:
+            printf("Dwarf\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+    return 0;
+}
