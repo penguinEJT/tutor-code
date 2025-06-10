@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int a, b;
+    double c;
+    cin >> a >> b;
+    c = a * b / 2.0;
+
+    cout << "Triangle area:" << fixed << setprecision(1) << c << endl;//控制在第一位
+
+    return 0;
+}
