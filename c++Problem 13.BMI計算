@@ -1,0 +1,13 @@
+#include <iostream>
+#include <iomanip>  // 用于控制输出格式
+
+int main() {
+    int weight, height;
+    double bmi;
+
+    std::cin >> weight >> height;
+    bmi = static_cast<double>(weight) / ((height / 100.0) * (height / 100.0));
+    std::cout << std::fixed << std::setprecision(2) << bmi << std::endl;
+
+    return 0;
+}
