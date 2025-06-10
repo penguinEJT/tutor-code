@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cctype>
+
+int main() {
+    char ch;
+    std::cin >> ch;
+
+    // 轉成小寫方便判斷
+    ch = std::tolower(ch);
+
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+        std::cout << "母音" << std::endl;
+    } else {
+        std::cout << "子音" << std::endl;
+    }
+
+    return 0;
+}
