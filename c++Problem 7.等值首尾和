@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    int number;
+    std::cin >> number;
+    std::vector<int> a(number), b(number), c(number);
+    int count = 0;
+
+    for (int i = 0; i < number; ++i) {
+        std::cin >> a[i];
+    }
+
+    b[0] = a[0];
+    for (int i = 1; i < number; ++i) {
+        b[i] = b[i - 1] + a[i];
+    }
+
+    c[number - 1] = a[number - 1];
+    for (int i = number - 2; i >= 0; --i) {
+        c[i] = c[i + 1] + a[i];
+    }
+
+    for (int i = 0; i < number; ++i) {
+        if (b[i] == c[number - i - 1]) {
+            count++;
+        }
+    }
+
+    std::cout << count << std::endl;
+    return 0;
+}
