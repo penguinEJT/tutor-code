@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    int a, b, c;
+    double area;
+
+    std::cin >> a >> b >> c;
+    area = (a + b) * c / 2.0;
+
+    std::cout << "Trapezoid area:" << std::fixed << std::setprecision(1) << area << std::endl;
+
+    return 0;
+}
