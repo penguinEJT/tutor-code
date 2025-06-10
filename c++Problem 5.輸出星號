@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string ch;
+
+    // 讀入 5 個字元（包含換行會被吃掉，所以用 cin >> ch 比較安全）
+    std::cin >> ch;
+
+    for (int i = 0; i < 5; i++) {
+        int count = ch[i] - '0'; // 把字元轉為對應整數
+        for (int j = 0; j < count; j++) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
