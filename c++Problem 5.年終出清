@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>  // for round
+
+int main() {
+    int P;
+    double totalPrice;
+
+    std::cin >> P;
+
+    if (P >= 100) {
+        totalPrice = P * 100 * 0.7;
+    } else if (P >= 30) {
+        totalPrice = P * 100 * 0.8;
+    } else if (P >= 10) {
+        totalPrice = P * 100 * 0.9;
+    } else {
+        totalPrice = P * 100;
+    }
+
+    std::cout << std::fixed << std::setprecision(0) << totalPrice << std::endl;
+
+    return 0;
+}
