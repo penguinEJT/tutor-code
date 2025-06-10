@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    int a[6];
+    int number = 0;
+
+    for (int i = 0; i < 6; i++) {
+        std::cin >> a[i];
+        number += a[i] * a[i];
+    }
+
+    std::cout << number << std::endl;
+
+    return 0;
+}
