@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    int n;  
+    std::cin >> n;  
+    for (int j = 0; j < n; j++) {
+        int i;
+        std::cin >> i; 
+        if (i > 31) {
+            std::cout << "Value of more than 31" << std::endl;
+        } else {
+            // 使用位移運算計算 2^i
+            std::cout << (1LL << i) << std::endl;
+        }
+    }
+    return 0;
+}
