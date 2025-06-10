@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    int number;
+    std::cin >> number;
+    std::vector<int> a(5);
+    for (int i = 0; i < 5; ++i) {
+        std::cin >> a[i];
+    }
+
+    std::vector<int> count(14, 0); // 牌號範圍假設是 0~13
+
+    for (int i = 0; i < number; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            int card;
+            std::cin >> card;
+            count[card]++;
+        }
+    }
+
+    int result = 0;
+    for (int i = 0; i < 5; ++i) {
+        if (count[a[i]] > 0) {
+            result++;
+        }
+    }
+
+    std::cout << result << std::endl;
+    return 0;
+}
