@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    char ch[4];
+
+    for (int i = 0; i < 4; i++) {
+        ch[i] = std::cin.get();//讀取四個連續
+    }
+
+    for (int i = 0; i < 4; i++) {
+        std::cout << ch[i] << std::endl;
+    }
+
+    return 0;
+}
