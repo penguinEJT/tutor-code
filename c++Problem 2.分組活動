@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    int number, group;
+    std::string a;
+
+    std::cin >> number >> a >> group;
+
+    for (int i = 0; i < number; i++) {
+        std::cout << a[i];
+        if ((i + 1) % group == 0 && (i + 1) != number) {
+            std::cout << ' ';
+        }
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
